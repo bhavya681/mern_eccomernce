@@ -22,7 +22,7 @@ app.use(express.json());
 
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, "./client/dist")));
+app.use(express.static(path.join(__dirname, "./dist")));
 
 const port = process.env.PORT || 8080;
 
@@ -33,7 +33,7 @@ app.use("/api/v1/category", category);
 app.use("/api/v1/product", product);
 
 app.use("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/dist/index.html"));
+  res.sendFile(path.join(__dirname, "./dist/index.html"));
 });
 
 app.listen(port, () => {
