@@ -33,7 +33,7 @@ app.use("/api/v1/category", category);
 app.use("/api/v1/product", product);
 
 app.use("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "./client/dist/index.html"));
 });
 
 app.listen(port, () => {
